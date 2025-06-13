@@ -1,0 +1,19 @@
+# Ambiente Virtual
+venv/
+
+# Segredos
+.streamlit/
+
+# Modelos de IA Treinados (MUITO GRANDES!)
+sentiment_model_en/
+emotion_model_en/
+
+# Arquivos compactados
+*.zip
+
+# Cache do Python e logs
+__pycache__/
+results/
+logs/
+results_sentiment_en/
+results_emocoes_en/

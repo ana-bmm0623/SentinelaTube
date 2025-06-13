@@ -2,12 +2,12 @@
 import re
 from googleapiclient.discovery import build
 
-def extrair_id_video(url: str) -> str | None:
+def extrair_id_video(url: str):
     regex = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(?:embed\/)?(?:v\/)?(?:shorts\/)?([\w-]{11})(?:\S+)?"
     match = re.search(regex, url)
     return match.group(1) if match else None
 
-def buscar_comentarios(video_id: str, api_key: str, max_comments: int = 500) -> list[str] | None:
+def buscar_comentarios(video_id: str, api_key: str, max_comments: int = 500):
     try:
         youtube = build('youtube', 'v3', developerKey=api_key)
         all_comments = []

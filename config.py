@@ -1,52 +1,17 @@
 # config.py
-# Este arquivo centraliza todas as configurações e constantes do projeto SentinelaTube.
-
-# --- CAMINHOS PARA OS MODELOS TREINADOS ---
-# Caminho para a pasta onde o modelo de sentimento (Positivo/Negativo/Neutro) foi salvo.
-SAVED_MODEL_PATH_SENTIMENT = "./meu_modelo_sentimento"
-
-# Caminho para a pasta onde o modelo de emoções será salvo.
-SAVED_MODEL_PATH_EMOTION = "./meu_modelo_emocoes"
-
-
-# --- MAPEAMENTO DE RÓTULOS (LABELS) ---
+# Caminhos para as pastas dos modelos que você descompactou
+SAVED_MODEL_PATH_SENTIMENT = "./sentiment_model_en"
+SAVED_MODEL_PATH_EMOTION = "./emotion_model_en"
 
 # Mapeamento para o Modelo de Sentimento (3 classes)
-LABEL_MAP_SENTIMENT = {
-    0: 'Negativo', 
-    1: 'Neutro', 
-    2: 'Positivo'
-}
+LABEL_MAP_SENTIMENT = {0: 'Negative', 1: 'Neutral', 2: 'Positive'}
 
-# Mapeamento para o Modelo de Emoções (28 classes)
-# Baseado no dataset GoEmotions (usado no script treinar_emocoes.py)
+# Mapeamento para o Modelo de Emoções (28 classes do GoEmotions)
 LABEL_MAP_EMOTION = {
-    0: 'admiração',
-    1: 'diversão',
-    2: 'raiva',
-    3: 'aborrecimento',
-    4: 'cuidado',
-    5: 'confusão',
-    6: 'curiosidade',
-    7: 'desejo',
-    8: 'decepção',
-    9: 'desaprovação',
-    10: 'nojo',
-    11: 'constrangimento',
-    12: 'entusiasmo',
-    13: 'medo',
-    14: 'gratidão',
-    15: 'tristeza',
-    16: 'alegria',
-    17: 'amor',
-    18: 'nervosismo',
-    19: 'otimismo',
-    20: 'orgulho',
-    21: 'percepção',
-    22: 'alívio',
-    23: 'remorso',
-    24: 'tristeza', # 'sadness' aparece novamente, pode ser um sinônimo no dataset
-    25: 'surpresa',
-    26: 'neutro',   # O dataset de emoções também inclui uma categoria neutra
-    27: 'aprovação' # 'approval' está duplicado, mas mantemos para consistência com o dataset original
+    0: 'admiration', 1: 'amusement', 2: 'anger', 3: 'annoyance', 4: 'approval', 
+    5: 'caring', 6: 'confusion', 7: 'curiosity', 8: 'desire', 9: 'disappointment', 
+    10: 'disapproval', 11: 'disgust', 12: 'embarrassment', 13: 'excitement', 14: 'fear', 
+    15: 'gratitude', 16: 'grief', 17: 'joy', 18: 'love', 19: 'nervousness', 
+    20: 'optimism', 21: 'pride', 22: 'realization', 23: 'relief', 24: 'remorse', 
+    25: 'sadness', 26: 'surprise', 27: 'neutral'
 }
