@@ -2,7 +2,7 @@
 venv/
 
 # Segredos
-.streamlit/
+.streamlit/secrets.toml
 
 # Modelos de IA Treinados (MUITO GRANDES!)
 sentiment_model_en/

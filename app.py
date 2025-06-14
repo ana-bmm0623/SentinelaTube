@@ -14,8 +14,8 @@ def carregar_modelos_cached():
     tok_emo, mod_emo = carregar_modelo(SAVED_MODEL_PATH_EMOTION)
     return tok_sent, mod_sent, tok_emo, mod_emo
 
-st.set_page_config(page_title="InsightTube", layout="wide")
-st.title("💡 InsightTube: Deep YouTube Comment Analyzer")
+st.set_page_config(page_title="SentinelaTube", layout="wide")
+st.title("💡 SentinelaTube: Deep YouTube Comment Analyzer")
 st.write("This app uses two specialized Transformer models to perform a deep analysis of sentiment, emotions, and topics from YouTube comments.")
 
 tok_sent, mod_sent, tok_emo, mod_emo = carregar_modelos_cached()
